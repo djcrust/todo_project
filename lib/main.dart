@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       title: 'Todo Project with Getx',
-      home: Homepage(s),
+      home: Homepage(),
     );
   }
 }
