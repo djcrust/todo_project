@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:get/get.dart';
 import 'package:todo_project/app/core/utils/keys.dart';
 import 'package:todo_project/app/data/models/task.dart';
@@ -13,5 +12,9 @@ class TaskProvider {
     jsonDecode(_storage.read(taskKey).toString())
         .forEach((e) => tasks.add(Task.fromJson(e)));
     return tasks;
+  }
+
+  void writeTasks(List<Task> tasks) {
+    _storage.write(taskKey, jsonEncode(tasks));
   }
 }

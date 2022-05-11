@@ -17,4 +17,5 @@ class StorageService extends GetxService {
   void write(String key, dynamic value) async {
     await _box.write(key, value);
   }
+
 }
